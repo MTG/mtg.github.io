@@ -1,0 +1,15 @@
+# Site settings
+title: MTG projects
+email: mtg@upf.edu
+description: "Projects that we make in mtg"
+baseurl: ""
+url: "http://mtg.upf.edu"
+twitter_username: mtg_upf
+github_username:  MTG
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+collections:
+ - projects

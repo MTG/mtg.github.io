@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1>Projects</h1>
+
+
+  <h2>Essentia</h2>
+  Essentia is a library for doing signal analysis
+  <ul class="posts">
+    {% for project in site.projects %}
+    {% for tag in project.tags %}{% if tag == "essentia" %}
+      <li>
+          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
+      </li>
+      {% endif %}{% endfor %}
+      {% endfor %}
+  </ul>
+
+  <h2>CompMusic</h2>
+  CompMusic is a project to do MIR on music
+  <ul class="posts">
+    {% for project in site.projects %}
+    {% for tag in project.tags %}{% if tag == "compmusic" %}
+      <li>
+          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
+      </li>
+    {% endif %}{% endfor %}
+    {% endfor %}
+  </ul>
+
+  <h2>Freesound</h2>
+  A website that hosts free sounds
+  <ul class="posts">
+    {% for project in site.projects %}
+    {% for tag in project.tags %}{% if tag == "freesound" %}
+      <li>
+          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
+      </li>
+    {% endif %}{% endfor %}
+    {% endfor %}
+  </ul>
+
+  <h2>Education tools</h2>
+  Tools to help teach MIR
+  <ul class="posts">
+    {% for project in site.projects %}
+    {% for tag in project.tags %}{% if tag == "education" %}
+      <li>
+          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
+      </li>
+    {% endif %}{% endfor %}
+    {% endfor %}
+  </ul>
+
+  <h2>AcousticBrainz</h2>
+  A project to gather features from music
+  <ul class="posts">
+    {% for project in site.projects %}
+    {% for tag in project.tags %}{% if tag == "acousticbrainz" %}
+      <li>
+          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
+      </li>
+    {% endif %}{% endfor %}
+    {% endfor %}
+  </ul>
+
+  <h2>Other tools</h2>
+  Tools developed in the MTG
+  <ul class="posts">
+    {% for project in site.projects %}
+    {% for tag in project.tags %}{% if tag == "general" %}
+      <li>
+          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
+      </li>
+    {% endif %}{% endfor %}
+    {% endfor %}
+  </ul>
+
+
+</div>
