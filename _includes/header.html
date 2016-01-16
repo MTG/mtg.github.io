@@ -27,16 +27,6 @@
         {% endif %}
       </div>
       {% endcomment %}
-      <ul class="site-header-navigation">
-        {% assign mainprojects = "Essentia|CompMusic|Freesound|Education tools|AcousticBrainz|Other" | split: "|" %}
-        {% assign ghurls = "essentia|compmusic|freesound|education|acousticbrainz|other-tools" | split: "|" %}
-        {% for project in mainprojects %}
-        <li class="site-header-navigation-item"><a href="#{{ ghurls[forloop.index0] }}">{{ project }}</a></li>
-        {% endfor %}
-      </ul>
-
     </div> <!-- end of .container -->
-
   </div>
-
 </header>

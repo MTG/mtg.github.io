@@ -1,0 +1,55 @@
+@import 'variables.scss';
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+	-webkit-box-shadow:$top $left $blur $color #{$inset};
+	-moz-box-shadow:$top $left $blur $color #{$inset};
+	box-shadow:$top $left $blur $color #{$inset};
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin flex {
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+}
+
+@mixin breakpoint($point) {
+
+  $bp-xs: "(max-width: #{$xs})";
+  $bp-sm: "(max-width: #{$sm})";
+  $bp-md: "(max-width: #{$md})";
+
+
+  @if $point == xs {
+    @media #{$bp-xs} { @content; }
+  }
+  @else if $point == sm {
+    @media #{$bp-sm} { @content; }
+  }
+  @else if $point == md {
+    @media #{$bp-md}  { @content; }
+  }
+
+}

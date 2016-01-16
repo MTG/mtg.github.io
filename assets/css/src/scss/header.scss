@@ -1,0 +1,35 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.site-header {
+	background-color: $mtg-color;
+	@include box-shadow(0, 2px, 10px, rgba(0,0,0,0.2));
+	margin-bottom: 40px;
+	svg {
+		path {
+			fill: white;
+		}
+	}
+}
+
+.site-header-svg {
+	max-width: 550px;
+	margin: -10px auto 0;
+	float: none;
+	padding: 10px 10px;
+	img {
+		width: 100%;
+	}
+}
+
+.site-header-social-container {
+	width: 80px;
+	float: none;
+	margin: 0 auto;
+}
+
+.site-header-social {
+	width: 25px;
+	margin: 5px;
+	display: inline-block;
+}

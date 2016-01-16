@@ -1,0 +1,13 @@
+@import 'variables.scss';
+
+a {
+  color: $mtg-color;
+  &:hover, &:focus {
+    color: $mtg-color-darker;
+  }
+}
+
+html, body {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}

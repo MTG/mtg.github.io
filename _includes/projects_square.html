@@ -1,0 +1,36 @@
+<div class="row">
+  <h1 class="square-title">MTG's Open Source Technologies</h1>
+  <a href="https://github.com/{{ site.github_username }}"><h3 class="square-title-link">github.com/MTG</h3></a>
+  <ul class="project-square-container hidden-xs">
+    {% assign mainprojects = "Essentia|CompMusic|Freesound|Education tools|AcousticBrainz|Other" | split: "|" %}
+    {% assign ghurls = "essentia|compmusic|freesound|education|acousticbrainz|other-tools" | split: "|" %}
+    {% assign description = "A library for signal analysis.|Signal analysis on non-western music.|
+    A website for sharing sounds.|Tools to help teach MIR.|A project to gather features from music.|Tools developed in the MTG." | split: "|" %}
+    {% for project in mainprojects %}
+    <li class="col-xs-6 col-sm-4 project-square-item">
+      <a href="#{{ ghurls[forloop.index0] }}" title="{{ project }}">
+        <div class="project-square-item-image-box">
+          <div class="project-square-item-image-content">
+            <span class="project-square-item-image-center-helper"></span>
+            {% unless project contains "Education" or project contains "Other" %}
+              <img class="project-square-item-image" src="assets/img/{{ ghurls[forloop.index0] }}_logo.png"
+                alt="{{ project }} logo"/>
+            {% endunless %}
+            {% if project contains "Education" or project contains "Other" %}
+              <div class="project-square-item-image">
+                {{ project }}
+              </div>
+            {% endif %}
+            <div class="project-square-item-image-content-cover">
+              <div class="project-square-item-image-content-cover-text">
+                {{ description[forloop.index0] }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="visible-xs">{{ project }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

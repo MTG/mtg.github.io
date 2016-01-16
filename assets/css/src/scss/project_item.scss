@@ -1,0 +1,49 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.project-list {
+  margin-top: 100px;
+  @include breakpoint(sm) {
+    margin-top: 10px;
+  }
+}
+
+.project-row {
+  margin: 20px 0 40px;
+}
+
+.library-title {
+  max-width: 100%;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.library-description {
+  font-size: 16px;
+}
+
+.library-projects-container {
+  @include flex();
+  margin-top: 5px;
+}
+
+.library-project-item {
+  margin: 10px 0;
+  width: 100%;
+  &.important {
+    order: -1;
+  }
+}
+
+.library-project-item-title {
+  font-size: 21px;
+}
+
+.library-project-item-title-link {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.library-project-item-description {
+  font-size: 14px;
+}

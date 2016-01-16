@@ -1,44 +1,42 @@
 <footer class="site-footer">
 
   <div class="container footer-container">
-    <div class="row">
-      <div class="col-md-6">
-        <a class="twitter-timeline" href="https://twitter.com/mtg_upf" data-widget-id="686225176443355136">Tweets by @mtg_upf</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </div>
-      <div class="col-md-6">
-        <div class="footer-contact">
-          <h1>Contact</h1>
-          <div>
-            <a href="mailto:{{ site.email }}">
-              <span class="site-header-social">
-                <div class="icon email">
-                  {% include svg_icons/email.html %}
-                </div>
-              </span>
-              <div class="contact-label">{{ site.email }}</div>
-            </a>
-          </div>
-          <div>
-            <a href="https://github.com/{{ site.github_username }}">
-              <span class="site-header-social">
-                <div class="icon github">
-                  {% include svg_icons/github_icon.html %}
-                </div>
-              </span>
-              <div class="contact-label">github.com/{{ site.github_username }}</div>
-            </a>
-          </div>
-          <div>
-            <a href="https://twitter.com/{{ site.twitter_username}}">
-              <span class="site-header-social">
-                <div class="icon email">
-                  {% include svg_icons/twitter_icon.html %}
-                </div>
-              </span>
-              <div class="contact-label">twitter.com/{{ site.twitter_username}}</div>
-            </a>
-          </div>
+    <div class="footer-column">
+      <a class="twitter-timeline" href="https://twitter.com/mtg_upf" data-widget-id="686225176443355136">Tweets by @mtg_upf</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+    <div class="footer-column important">
+      <div class="footer-contact">
+        <h1>Contact</h1>
+        <div>
+          <a href="mailto:{{ site.email }}">
+            <span class="site-header-social">
+              <div class="icon email">
+                {% include svg_icons/email.html %}
+              </div>
+            </span>
+            <div class="contact-label">{{ site.email }}</div>
+          </a>
+        </div>
+        <div>
+          <a href="https://github.com/{{ site.github_username }}">
+            <span class="site-header-social">
+              <div class="icon github">
+                {% include svg_icons/github_icon.html %}
+              </div>
+            </span>
+            <div class="contact-label">github.com/{{ site.github_username }}</div>
+          </a>
+        </div>
+        <div>
+          <a href="https://twitter.com/{{ site.twitter_username}}">
+            <span class="site-header-social">
+              <div class="icon email">
+                {% include svg_icons/twitter_icon.html %}
+              </div>
+            </span>
+            <div class="contact-label">twitter.com/{{ site.twitter_username}}</div>
+          </a>
         </div>
       </div>
     </div>

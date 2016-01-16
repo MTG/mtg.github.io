@@ -1,0 +1,279 @@
+/* line 3, scss/global.scss */
+a {
+  color: #c8152f;
+}
+/* line 5, scss/global.scss */
+a:hover, a:focus {
+  color: #a01025;
+}
+
+/* line 10, scss/global.scss */
+html, body {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* line 4, scss/header.scss */
+.site-header {
+  background-color: #c8152f;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) ;
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) ;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) ;
+  margin-bottom: 40px;
+}
+/* line 9, scss/header.scss */
+.site-header svg path {
+  fill: white;
+}
+
+/* line 15, scss/header.scss */
+.site-header-svg {
+  max-width: 550px;
+  margin: -10px auto 0;
+  float: none;
+  padding: 10px 10px;
+}
+/* line 20, scss/header.scss */
+.site-header-svg img {
+  width: 100%;
+}
+
+/* line 25, scss/header.scss */
+.site-header-social-container {
+  width: 80px;
+  float: none;
+  margin: 0 auto;
+}
+
+/* line 31, scss/header.scss */
+.site-header-social {
+  width: 25px;
+  margin: 5px;
+  display: inline-block;
+}
+
+/* line 4, scss/project_item.scss */
+.project-list {
+  margin-top: 100px;
+}
+@media (max-width: 991px) {
+  /* line 4, scss/project_item.scss */
+  .project-list {
+    margin-top: 10px;
+  }
+}
+
+/* line 11, scss/project_item.scss */
+.project-row {
+  margin: 20px 0 40px;
+}
+
+/* line 15, scss/project_item.scss */
+.library-title {
+  max-width: 100%;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+/* line 21, scss/project_item.scss */
+.library-description {
+  font-size: 16px;
+}
+
+/* line 25, scss/project_item.scss */
+.library-projects-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  margin-top: 5px;
+}
+
+/* line 30, scss/project_item.scss */
+.library-project-item {
+  margin: 10px 0;
+  width: 100%;
+}
+/* line 33, scss/project_item.scss */
+.library-project-item.important {
+  order: -1;
+}
+
+/* line 38, scss/project_item.scss */
+.library-project-item-title {
+  font-size: 21px;
+}
+
+/* line 42, scss/project_item.scss */
+.library-project-item-title-link {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* line 47, scss/project_item.scss */
+.library-project-item-description {
+  font-size: 14px;
+}
+
+/* line 4, scss/footer.scss */
+.footer-container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+}
+/* line 9, scss/footer.scss */
+.footer-container svg path {
+  fill: #c8152f;
+}
+
+/* line 15, scss/footer.scss */
+.footer-column {
+  width: 50%;
+  padding: 20px;
+}
+@media (max-width: 991px) {
+  /* line 15, scss/footer.scss */
+  .footer-column {
+    width: inherit;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 991px) {
+  /* line 22, scss/footer.scss */
+  .footer-column.important {
+    order: -1;
+  }
+}
+
+/* line 30, scss/footer.scss */
+.footer-contact h1 {
+  font-size: 36px;
+}
+/* line 33, scss/footer.scss */
+.footer-contact a:hover, .footer-contact a:focus {
+  text-decoration: none;
+}
+
+/* line 38, scss/footer.scss */
+.contact-label {
+  font-size: 21px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+/* line 3, scss/project_square.scss */
+.square-title {
+  text-align: center;
+}
+
+/* line 7, scss/project_square.scss */
+.square-title-link {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* line 12, scss/project_square.scss */
+.project-square-container {
+  list-style: none;
+  max-width: 690px;
+  float: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* line 20, scss/project_square.scss */
+.project-square-item {
+  margin: 10px 0;
+}
+
+/* line 24, scss/project_square.scss */
+.project-square-item-image-box {
+  position: relative;
+  width: 100%;
+  border: 1px solid #dfdfdf;
+}
+/* line 28, scss/project_square.scss */
+.project-square-item-image-box:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+/* line 35, scss/project_square.scss */
+.project-square-item-image-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  white-space: nowrap;
+}
+
+/* line 44, scss/project_square.scss */
+.project-square-item-image-center-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* line 50, scss/project_square.scss */
+.project-square-item-image {
+  width: 95%;
+  vertical-align: middle;
+  display: inline-block;
+  color: #444;
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* line 61, scss/project_square.scss */
+.project-square-item-image-content-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -moz-transition: background-color, 0.3s, ease-in-out;
+  -o-transition: background-color, 0.3s, ease-in-out;
+  -webkit-transition: background-color, 0.3s, ease-in-out;
+  transition: background-color, 0.3s, ease-in-out;
+}
+/* line 68, scss/project_square.scss */
+.project-square-item-image-content-cover:hover {
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+/* line 73, scss/project_square.scss */
+.project-square-item-image-content-cover-text {
+  position: absolute;
+  text-align: center;
+  bottom: 5px;
+  opacity: 0;
+  left: 10px;
+  right: 10px;
+  word-wrap: break-word;
+  white-space: normal;
+  -moz-transition: opacity, 0.3s, ease-in-out;
+  -o-transition: opacity, 0.3s, ease-in-out;
+  -webkit-transition: opacity, 0.3s, ease-in-out;
+  transition: opacity, 0.3s, ease-in-out;
+  -moz-transition: bottom, 0.3s, cubic-bezier(0.65, 0.05, 0.36, 1);
+  -o-transition: bottom, 0.3s, cubic-bezier(0.65, 0.05, 0.36, 1);
+  -webkit-transition: bottom, 0.3s, cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: bottom, 0.3s, cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+/* line 84, scss/project_square.scss */
+.project-square-item-image-content-cover-text.hovered {
+  bottom: 10px;
+  opacity: 1;
+}
