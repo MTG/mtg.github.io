@@ -15,7 +15,7 @@ function setUpPage() {
 
 function showText(event) {
   var square_element = event.target;
-  square_text_element = square_element.querySelector('.project-square-item-image-content-cover-text');
+  var square_text_element = square_element.querySelector('.project-square-item-image-content-cover-text');
   try {
     square_text_element.className += square_text_element.className ? ' hovered' : 'hovered';
   }
@@ -25,7 +25,7 @@ function showText(event) {
 
 function hideText(event) {
   var square_element = event.target;
-  square_text_element = square_element.querySelector('.project-square-item-image-content-cover-text');
+  var square_text_element = square_element.querySelector('.project-square-item-image-content-cover-text');
   try {
     square_text_element.className = "project-square-item-image-content-cover-text";
   }
