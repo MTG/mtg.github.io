@@ -2,82 +2,410 @@
 layout: default
 ---
 
-<div class="home">
+<div class="project-list">
 
-  <h1>Projects</h1>
+  <div class="row project-row">
+    <div class="col-sm-5 col-md-4 col-lg-3">
+      <h1 id="essentia" class="library-title">Essentia</h1>
+      <p class="library-description">
+        A library for signal analysis.
+      </p>
+    </div>
+    <div class="col-sm-7 col-md-8 col-lg-9">
+      {% assign projects_with_image = "essentia" | split: "|" %}
+      <div class="row">
+        <!-- at first display projects with image -->
+        {% for project in site.projects %}
+          {% if projects_with_image contains project.name %}
+            <div class="col-sm-6 col-md-4 project-item">
+              {% if project.name == "essentia" %}
+              <a class="hidden-xs" href="{{project.ghurl}}" title="{{ project.name }}">
+                <div class="project-item-image-box">
+                  <div class="project-item-image-content">
+                    <span class="project-item-image-center-helper"></span>
+                      <img class="project-item-image" src="assets/images/freesound_logo_small.png"
+                        alt="{{ project.name }} logo"/>
+                    <div class="project-item-image-content-cover">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              {% endif %}
+              <div class="project-item-title">
+                <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %}
+          {% if forloop.last == true %}
+            </div>
+            <div class="row">
+          {% endif %}
+        {% endfor %}
+
+        <!-- show projects without image -->
+        {% for project in site.projects %}
+          {% unless projects_with_image contains project.name %}
+            {% for tag in project.tags %}{% if tag == "essentia" %}
+            <div class="col-sm-6 col-md-4">
+                <div class="project-item">
+                  <div class="project-item-title">
+                    <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+                  </div>
+                  <div class="project-item-description">
+                    {{ project.description }}
+                  </div>
+                </div>
+            </div>
+            {% endif %}{% endfor %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row project-row">
+    <div class="col-sm-5 col-md-4 col-lg-3">
+      <h1 id="compmusic" class="library-title">CompMusic</h1>
+      <p class="library-description">
+        Signal analysis on non-western music.
+      </p>
+    </div>
+    <div class="col-sm-7 col-md-8 col-lg-9">
+      {% assign projects_with_image = "dunya" | split: "|" %}
+      <div class="row">
+        <!-- at first display projects with image -->
+        {% for project in site.projects %}
+          {% if projects_with_image contains project.name %}
+            <div class="col-sm-6 col-md-4 project-item">
+              {% if project.name == "dunya" %}
+              <a class="hidden-xs" href="{{project.ghurl}}" title="{{ project.name }}">
+                <div class="project-item-image-box">
+                  <div class="project-item-image-content">
+                    <span class="project-item-image-center-helper"></span>
+                      <img class="project-item-image" src="assets/images/freesound_logo_small.png"
+                        alt="{{ project.name }} logo"/>
+                    <div class="project-item-image-content-cover">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              {% endif %}
+              <div class="project-item-title">
+                <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %}
+          {% if forloop.last == true %}
+            </div>
+            <div class="row">
+          {% endif %}
+        {% endfor %}
+
+        <!-- show projects without image -->
+        {% for project in site.projects %}
+          {% unless projects_with_image contains project.name %}
+            {% for tag in project.tags %}{% if tag == "compmusic" %}
+              <div class="col-sm-6 col-md-4">
+                <div class="project-item">
+                  <div class="project-item-title">
+                    <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+                  </div>
+                  <div class="project-item-description">
+                    {{ project.description }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}{% endfor %}
+            {% assign mod6 = forloop.index | modulo:6 %}
+            {% if mod6 == 0 %}
+              </div><div class="row">
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <hr>
 
 
-  <h2>Essentia</h2>
-  Essentia is a library for doing signal analysis
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "essentia" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-      {% endif %}{% endfor %}
-      {% endfor %}
-  </ul>
+  <div class="row project-row">
+    <div class="col-sm-5 col-md-4 col-lg-3">
+      <h1 id="freesound" class="library-title">Freesound</h1>
+      <p class="library-description">
+        A website for sharing sounds
+      </p>
+    </div>
+    <div class="col-sm-7 col-md-8 col-lg-9">
+      {% assign projects_with_image = "freesound" | split: "|" %}
+      <div class="row">
+        <!-- at first display projects with image -->
+        {% for project in site.projects %}
+          {% if projects_with_image contains project.name %}
+            <div class="col-sm-6 col-md-4 project-item">
+              {% if project.name == "freesound" %}
+              <a class="hidden-xs" href="{{project.ghurl}}" title="{{ project.name }}">
+                <div class="project-item-image-box">
+                  <div class="project-item-image-content">
+                    <span class="project-item-image-center-helper"></span>
+                      <img class="project-item-image" src="assets/images/freesound_logo_small.png"
+                        alt="{{ project.name }} logo"/>
+                    <div class="project-item-image-content-cover">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              {% endif %}
+              <div class="project-item-title">
+                <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %}
+          {% if forloop.last == true %}
+            </div>
+            <div class="row">
+          {% endif %}
+        {% endfor %}
 
-  <h2>CompMusic</h2>
-  CompMusic is a project to do MIR on music
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "compmusic" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-    {% endif %}{% endfor %}
-    {% endfor %}
-  </ul>
+        <!-- show projects without image -->
+        {% for project in site.projects %}
+          {% unless projects_with_image contains project.name %}
+            {% for tag in project.tags %}{% if tag == "freesound" %}
+              <div class="col-sm-6 col-md-4">
+                <div class="project-item">
+                  <div class="project-item-title">
+                    <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+                  </div>
+                  <div class="project-item-description">
+                    {{ project.description }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}{% endfor %}
+            {% assign mod6 = forloop.index | modulo:6 %}
+            {% if mod6 == 0 %}
+              </div><div class="row">
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 
-  <h2>Freesound</h2>
-  A website that hosts free sounds
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "freesound" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-    {% endif %}{% endfor %}
-    {% endfor %}
-  </ul>
+  <hr>
 
-  <h2>Education tools</h2>
-  Tools to help teach MIR
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "education" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-    {% endif %}{% endfor %}
-    {% endfor %}
-  </ul>
+  <div class="row project-row">
+    <div class="col-sm-5 col-md-4 col-lg-3">
+      <h1 id="education" class="library-title">Education Tools</h1>
+      <p class="library-description">
+        Tools to help teach MIR
+      </p>
+    </div>
+    <div class="col-sm-7 col-md-8 col-lg-9">
+      {% assign projects_with_image = "" | split: "|" %}
+      <div class="row">
+        <!-- at first display projects with image -->
+        {% for project in site.projects %}
+          {% if projects_with_image contains project.name %}
+            <div class="col-sm-6 col-md-4 project-item">
+              {% if project.name == "" %}
+              <a class="hidden-xs" href="{{project.ghurl}}" title="{{ project.name }}">
+                <div class="project-item-image-box">
+                  <div class="project-item-image-content">
+                    <span class="project-item-image-center-helper"></span>
+                      <img class="project-item-image" src="assets/images/freesound_logo_small.png"
+                        alt="{{ project.name }} logo"/>
+                    <div class="project-item-image-content-cover">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              {% endif %}
+              <div class="project-item-title">
+                <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %} <!-- end of 'if projects_with_image contains project.name' -->
+          {% if forloop.last == true %}
+            </div>
+            <div class="row">
+          {% endif %}
+        {% endfor %}
 
-  <h2>AcousticBrainz</h2>
-  A project to gather features from music
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "acousticbrainz" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-    {% endif %}{% endfor %}
-    {% endfor %}
-  </ul>
+        <!-- show projects without image -->
+        {% for project in site.projects %}
+          {% unless projects_with_image contains project.name %}
+            {% for tag in project.tags %}{% if tag == "education" %}
+              <div class="col-sm-6 col-md-4">
+                <div class="project-item">
+                  <div class="project-item-title">
+                    <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+                  </div>
+                  <div class="project-item-description">
+                    {{ project.description }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}{% endfor %}
+            {% assign mod6 = forloop.index | modulo:6 %}
+            {% if mod6 == 0 %}
+              </div><div class="row">
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 
-  <h2>Other tools</h2>
-  Tools developed in the MTG
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "general" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-    {% endif %}{% endfor %}
-    {% endfor %}
-  </ul>
+  <hr>
+
+  <div class="row project-row">
+    <div class="col-sm-5 col-md-4 col-lg-3">
+      <h1 id="acousticbrainz" class="library-title">AcousticBrainz</h1>
+      <p class="library-description">
+        A project to gather features from music
+      </p>
+    </div>
+    <div class="col-sm-7 col-sm-8 col-lg-9">
+      {% assign projects_with_image = "" | split: "|" %}
+      <div class="row">
+        <!-- at first display projects with image -->
+        {% for project in site.projects %}
+          {% if projects_with_image contains project.name %}
+            <div class="col-sm-6 col-md-4 project-item">
+              {% if project.name == "" %}
+              <a class="hidden-xs" href="{{project.ghurl}}" title="{{ project.name }}">
+                <div class="project-item-image-box">
+                  <div class="project-item-image-content">
+                    <span class="project-item-image-center-helper"></span>
+                      <img class="project-item-image" src="assets/images/freesound_logo_small.png"
+                        alt="{{ project.name }} logo"/>
+                    <div class="project-item-image-content-cover">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              {% endif %}
+              <div class="project-item-title">
+                <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %} <!-- end of 'if projects_with_image contains project.name' -->
+          {% if forloop.last == true %}
+            </div>
+            <div class="row">
+          {% endif %}
+        {% endfor %}
+
+        <!-- show projects without image -->
+        {% for project in site.projects %}
+          {% unless projects_with_image contains project.name %}
+            {% for tag in project.tags %}{% if tag == "acousticbrainz" %}
+              <div class="col-sm-6 col-md-4">
+                <div class="project-item">
+                  <div class="project-item-title">
+                    <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+                  </div>
+                  <div class="project-item-description">
+                    {{ project.description }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}{% endfor %}
+            {% assign mod6 = forloop.index | modulo:6 %}
+            {% if mod6 == 0 %}
+              </div><div class="row">
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row project-row">
+    <div class="col-sm-5 col-md-4 col-lg-3">
+      <h1 id="other-tools" class="library-title">Other tools</h1>
+      <p class="library-description">
+        Tools developed in the MTG
+      </p>
+    </div>
+    <div class="col-sm-7 col-md-8 col-lg-9">
+      {% assign projects_with_image = "" | split: "|" %}
+      <div class="row">
+        <!-- at first display projects with image -->
+        {% for project in site.projects %}
+          {% if projects_with_image contains project.name %}
+            <div class="col-sm-6 col-md-4 project-item">
+              {% if project.name == "" %}
+              <a class="hidden-xs" href="{{project.ghurl}}" title="{{ project.name }}">
+                <div class="project-item-image-box">
+                  <div class="project-item-image-content">
+                    <span class="project-item-image-center-helper"></span>
+                      <img class="project-item-image" src="assets/images/freesound_logo_small.png"
+                        alt="{{ project.name }} logo"/>
+                    <div class="project-item-image-content-cover">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              {% endif %}
+              <div class="project-item-title">
+                <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %} <!-- end of 'if projects_with_image contains project.name' -->
+          {% if forloop.last == true %}
+            </div>
+            <div class="row">
+          {% endif %}
+        {% endfor %}
+
+        <!-- show projects without image -->
+        {% for project in site.projects %}
+          {% unless projects_with_image contains project.name %}
+            {% for tag in project.tags %}{% if tag == "general" %}
+              <div class="col-sm-6 col-md-4">
+                <div class="project-item">
+                  <div class="project-item-title">
+                    <a href="{{project.ghurl}}" class="project-item-title-link">{{ project.name }}</a>
+                  </div>
+                  <div class="project-item-description">
+                    {{ project.description }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}{% endfor %}
+            {% assign mod6 = forloop.index | modulo:6 %}
+            {% if mod6 == 0 %}
+              </div><div class="row">
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 
 
 </div>

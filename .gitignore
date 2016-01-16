@@ -1,2 +1,4 @@
 _site
 *.swp
+node_modules/
+.sass-cache/
