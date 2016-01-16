@@ -13,3 +13,6 @@ permalink: pretty
 
 collections:
  - projects
+
+ sass:
+  style: compressed

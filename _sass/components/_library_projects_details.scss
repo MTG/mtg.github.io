@@ -1,6 +1,3 @@
-@import 'variables.scss';
-@import 'mixins.scss';
-
 .project-list {
   margin-top: 100px;
   @include breakpoint(sm) {

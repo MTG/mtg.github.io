@@ -1,5 +1,3 @@
-@import 'variables.scss';
-
 @mixin box-shadow($top, $left, $blur, $color, $inset:"") {
 	-webkit-box-shadow:$top $left $blur $color #{$inset};
 	-moz-box-shadow:$top $left $blur $color #{$inset};
