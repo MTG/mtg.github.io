@@ -1,12 +1,19 @@
 .project-list {
   margin-top: 100px;
-  @include breakpoint(sm) {
+  @include breakpoint(xs) {
     margin-top: 10px;
   }
 }
 
 .project-row {
   margin: 20px 0 40px;
+}
+
+.library-info {
+  text-align: right;
+  @include breakpoint(xs) {
+    text-align: left;
+  };
 }
 
 .library-title {
@@ -22,6 +29,7 @@
 .library-projects-container {
   @include flex();
   margin-top: 5px;
+  max-width: 500px;
 }
 
 .library-project-item {
