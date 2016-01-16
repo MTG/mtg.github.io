@@ -6,8 +6,8 @@ function setUpPage() {
     var square = squares[i];
     if (typeof window.addEventListener === 'function') {
       (function(_square) {
-        _square.addEventListener('mouseover', showText);
-        _square.addEventListener('mouseout', hideText);
+        _square.addEventListener('mouseenter', showText);
+        _square.addEventListener('mouseleave', hideText);
       })(square);
     }
   }
