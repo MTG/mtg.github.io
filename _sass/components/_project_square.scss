@@ -24,6 +24,7 @@
   position: relative;
   width: 100%;
   border: 1px solid $light-grey;
+  @include box-shadow(0, 0, 20px, 0, $light-grey);
   &:before {
     content: "";
     display: block;
