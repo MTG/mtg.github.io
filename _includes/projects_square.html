@@ -4,8 +4,7 @@
   <ul class="project-square-container hidden-xs">
     {% assign mainprojects = "Essentia|CompMusic|Freesound|Education tools|AcousticBrainz|Other" | split: "|" %}
     {% assign ghurls = "essentia|compmusic|freesound|education|acousticbrainz|other-tools" | split: "|" %}
-    {% assign description = "A library for signal analysis.|Signal analysis on non-western music.|
-    A website for sharing sounds.|Tools to help teach MIR.|A project to gather features from music.|Tools developed in the MTG." | split: "|" %}
+    {% assign description = "A library for signal analysis.|Signal analysis on non-western music.|A website for sharing sounds.|Tools to help teach MIR.|A project to gather features from music.|Tools developed in the MTG." | split: "|" %}
     {% for project in mainprojects %}
     <li class="col-xs-6 col-sm-4 project-square-item">
       <a href="#{{ ghurls[forloop.index0] }}" title="{{ project }}">
