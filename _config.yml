@@ -10,6 +10,9 @@ github_username:  MTG
 # Build settings
 markdown: kramdown
 permalink: pretty
+sass:
+  style: compressed
+
 
 collections:
  - projects

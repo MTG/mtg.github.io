@@ -2,82 +2,157 @@
 layout: default
 ---
 
-<div class="home">
+<div class="project-list">
 
-  <h1>Projects</h1>
-
-
-  <h2>Essentia</h2>
-  Essentia is a library for doing signal analysis
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "essentia" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-      {% endif %}{% endfor %}
+  <hr>
+  <div class="row project-row">
+    <div class="col-sm-5 library-info">
+      <h1 id="essentia" class="library-title">Essentia</h1>
+      <p class="library-description">
+        A library for signal analysis.
+      </p>
+    </div>
+    <div class="col-sm-7 library-projects-container">
+      {% for project in site.projects %}
+          {% for tag in project.tags %}{% if tag == "essentia" %}
+            <div class="library-project-item {% if project.name == "essentia" %}important{% endif %}">
+              <div class="library-project-item-title">
+                <a href="{{project.ghurl}}" class="library-project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="library-project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %}{% endfor %}
       {% endfor %}
-  </ul>
+    </div>
+  </div>
 
-  <h2>CompMusic</h2>
-  CompMusic is a project to do MIR on music
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "compmusic" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-    {% endif %}{% endfor %}
-    {% endfor %}
-  </ul>
+  <hr>
 
-  <h2>Freesound</h2>
-  A website that hosts free sounds
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "freesound" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-    {% endif %}{% endfor %}
-    {% endfor %}
-  </ul>
+  <div class="row project-row">
+    <div class="col-sm-5 library-info">
+      <h1 id="compmusic" class="library-title">CompMusic</h1>
+      <p class="library-description">
+        Signal analysis on non-western music.
+      </p>
+    </div>
+    <div class="col-sm-7 library-projects-container">
+      {% for project in site.projects %}
+          {% for tag in project.tags %}{% if tag == "compmusic" %}
+            <div class="library-project-item">
+              <div class="library-project-item-title">
+                <a href="{{project.ghurl}}" class="library-project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="library-project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %}{% endfor %}
+      {% endfor %}
+    </div>
+  </div>
 
-  <h2>Education tools</h2>
-  Tools to help teach MIR
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "education" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-    {% endif %}{% endfor %}
-    {% endfor %}
-  </ul>
+  <hr>
 
-  <h2>AcousticBrainz</h2>
-  A project to gather features from music
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "acousticbrainz" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-    {% endif %}{% endfor %}
-    {% endfor %}
-  </ul>
 
-  <h2>Other tools</h2>
-  Tools developed in the MTG
-  <ul class="posts">
-    {% for project in site.projects %}
-    {% for tag in project.tags %}{% if tag == "general" %}
-      <li>
-          <a href="{{project.ghurl}}">{{ project.name }}</a> -- {{ project.description }}
-      </li>
-    {% endif %}{% endfor %}
-    {% endfor %}
-  </ul>
+  <div class="row project-row">
+    <div class="col-sm-5 library-info">
+      <h1 id="freesound" class="library-title">Freesound</h1>
+      <p class="library-description">
+        A website for sharing sounds
+      </p>
+    </div>
+    <div class="col-sm-7 library-projects-container">
+      {% for project in site.projects %}
+          {% for tag in project.tags %}{% if tag == "freesound" %}
+            <div class="library-project-item {% if project.name == "freesound" %}important{% endif %}">
+              <div class="library-project-item-title">
+                <a href="{{project.ghurl}}" class="library-project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="library-project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %}{% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row project-row">
+    <div class="col-sm-5 library-info">
+      <h1 id="education" class="library-title">Education Tools</h1>
+      <p class="library-description">
+        Tools to help teach MIR
+      </p>
+    </div>
+    <div class="col-sm-7 library-projects-container">
+      {% for project in site.projects %}
+          {% for tag in project.tags %}{% if tag == "education" %}
+            <div class="library-project-item">
+              <div class="library-project-item-title">
+                <a href="{{project.ghurl}}" class="library-project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="library-project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %}{% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row project-row">
+    <div class="col-sm-5 library-info">
+      <h1 id="acousticbrainz" class="library-title">AcousticBrainz</h1>
+      <p class="library-description">
+        A project to gather features from music
+      </p>
+    </div>
+    <div class="col-sm-7 library-projects-container">
+      {% for project in site.projects %}
+          {% for tag in project.tags %}{% if tag == "acousticbrainz" %}
+            <div class="library-project-item">
+              <div class="library-project-item-title">
+                <a href="{{project.ghurl}}" class="library-project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="library-project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %}{% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row project-row">
+    <div class="col-sm-5 library-info">
+      <h1 id="other-tools" class="library-title">Other tools</h1>
+      <p class="library-description">
+        Tools developed in the MTG
+      </p>
+    </div>
+    <div class="col-sm-7 library-projects-container">
+      {% for project in site.projects %}
+          {% for tag in project.tags %}{% if tag == "general" %}
+            <div class="library-project-item">
+              <div class="library-project-item-title">
+                <a href="{{project.ghurl}}" class="library-project-item-title-link">{{ project.name }}</a>
+              </div>
+              <div class="library-project-item-description">
+                {{ project.description }}
+              </div>
+            </div>
+          {% endif %}{% endfor %}
+      {% endfor %}
+    </div>
+  </div>
 
 
 </div>

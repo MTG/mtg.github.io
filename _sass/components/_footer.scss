@@ -1,0 +1,40 @@
+.footer-container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  @include flex;
+  svg {
+    path {
+      fill: $mtg-color;
+    }
+  }
+}
+
+.footer-column {
+  width: 50%;
+  padding: 20px;
+  @include breakpoint(sm) {
+    width: inherit;
+    margin-bottom: 40px;
+  }
+  &.important {
+    @include breakpoint(sm) {
+      order: -1;
+    }
+  }
+}
+
+.footer-contact {
+  h1 {
+    font-size: 36px;
+  }
+  a:hover, a:focus {
+    text-decoration: none;
+  }
+}
+
+.contact-label {
+  font-size: 21px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+}
